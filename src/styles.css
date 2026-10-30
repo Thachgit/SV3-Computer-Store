@@ -67,3 +67,14 @@
 }
 
 .arrow-icon{display:inline-flex;width:16px;height:16px;align-items:center;justify-content:center;flex:none}.arrow-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.image-arrow svg{width:15px;height:15px}
+
+/* Expanded team profiles for the About Us page. */
+.team-card{min-height:330px;display:flex;flex-direction:column}
+.team-card-top{flex:none}
+.team-card-bottom{flex:1;display:flex;flex-direction:column}
+.member-responsibility{min-height:34px;margin:0 0 13px;color:#526177;font-size:11px;line-height:1.5}
+.member-study{display:grid;gap:5px;padding-top:12px;border-top:1px solid var(--line)}
+.member-study strong{font-size:10px;color:var(--navy);font-weight:600}
+.member-study span{font-size:10px;color:#7a8798;line-height:1.5}
+.team-caption{margin-top:auto;padding-top:14px}
+@media(max-width:520px){.team-grid{grid-template-columns:1fr}.team-card{min-height:300px}.team-heading{align-items:start;gap:16px}.team-heading p{line-height:1.7}}
