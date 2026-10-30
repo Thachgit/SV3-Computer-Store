@@ -54,8 +54,10 @@
 
 @media(max-width:520px){
   .nav-row{grid-template-columns:34px minmax(0,1fr);grid-template-areas:"menu brand" "actions actions";column-gap:9px;row-gap:7px;padding-top:9px;padding-bottom:8px}
-  .nav-actions{justify-content:flex-end;gap:8px}
-  .nav-actions select{max-width:66px}
+  .nav-actions{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:0}
+  .nav-actions select{width:100%;max-width:none;min-height:34px;text-align:center;text-align-last:center}
+  .nav-actions .language-toggle{width:100%;min-height:34px;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  .nav-actions .cart-link{min-height:34px;justify-content:center}
   .brand{gap:8px}
   .brand-copy{letter-spacing:.12em}
   .hero-device{display:none}
