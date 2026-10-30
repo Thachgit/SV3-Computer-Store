@@ -12,7 +12,7 @@ import { Currency, Language } from './models/product';
       <div class="container nav-row">
         <button class="mobile-menu-toggle" type="button" (click)="openMobileMenu()" [attr.aria-label]="km() ? 'បើកម៉ឺនុយ' : 'Open menu'" [attr.aria-expanded]="mobileMenuOpen()" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
         <a class="brand" routerLink="/" aria-label="SV3 Computer home"><span class="brand-mark">SV<span>3</span></span><span class="brand-copy">COMPUTER<small>TECH, MADE PERSONAL</small></span></a>
-        <nav class="desktop-nav"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ km() ? 'ទំនិញ' : 'Shop' }}</a><a routerLink="/about" routerLinkActive="active">{{ km() ? 'អំពីយើង' : 'About Us' }}</a></nav>
+        <nav class="desktop-nav"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ km() ? 'ទំព័រដើម' : 'Home' }}</a><a routerLink="/shop" routerLinkActive="active">{{ km() ? 'ទំនិញ' : 'Shop' }}</a><a routerLink="/about" routerLinkActive="active">{{ km() ? 'អំពីយើង' : 'About Us' }}</a></nav>
         <div class="nav-actions">
           <select aria-label="Display currency" [value]="prefs.currency()" (change)="changeCurrency($event)"><option value="USD">USD $</option><option value="KHR">KHR ៛</option></select>
           <button class="language-toggle" (click)="toggleLanguage()">{{ km() ? 'EN' : 'ខ្មែរ' }}</button>
@@ -23,7 +23,7 @@ import { Currency, Language } from './models/product';
         <button class="mobile-menu-backdrop" type="button" (click)="closeMobileMenu()" [attr.aria-label]="km() ? 'បិទម៉ឺនុយ' : 'Close menu'"></button>
         <aside class="mobile-menu-panel" id="mobile-navigation" aria-label="Mobile navigation">
           <div class="mobile-menu-heading"><span>{{ km() ? 'ម៉ឺនុយ' : 'MENU' }}</span><button type="button" (click)="closeMobileMenu()" [attr.aria-label]="km() ? 'បិទម៉ឺនុយ' : 'Close menu'">×</button></div>
-          <nav><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMobileMenu()">{{ km() ? 'ទំនិញ' : 'Shop' }}<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span></a><a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">{{ km() ? 'អំពីយើង' : 'About Us' }}<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span></a></nav>
+          <nav><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMobileMenu()">{{ km() ? 'ទំព័រដើម' : 'Home' }}<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span></a><a routerLink="/shop" routerLinkActive="active" (click)="closeMobileMenu()">{{ km() ? 'ទំនិញ' : 'Shop' }}<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span></a><a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">{{ km() ? 'អំពីយើង' : 'About Us' }}<span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span></a></nav>
           <a class="mobile-menu-cart" routerLink="/cart" (click)="closeMobileMenu()">{{ km() ? 'កន្ត្រក' : 'Cart' }} <b>{{ cart.count() }}</b></a>
         </aside>
       }

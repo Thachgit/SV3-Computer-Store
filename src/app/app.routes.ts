@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/catalog/catalog.component').then(m => m.CatalogComponent), title: 'SV3 Computer | Premium Laptops' },
+  { path: 'shop', loadComponent: () => import('./pages/shop/shop.component').then(m => m.ShopComponent), title: 'Shop laptops | SV3 Computer' },
   { path: 'about', loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent), title: 'About Us | SV3 Computer' },
   { path: 'product/:id', loadComponent: () => import('./pages/product-detail/product-detail.component').then(m => m.ProductDetailComponent), title: 'Laptop details | SV3 Computer' },
   { path: 'cart', loadComponent: () => import('./pages/cart/cart.component').then(m => m.CartComponent), title: 'Your cart | SV3 Computer' },
