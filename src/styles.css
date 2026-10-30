@@ -78,3 +78,7 @@
 .member-study span{font-size:10px;color:#7a8798;line-height:1.5}
 .team-caption{margin-top:auto;padding-top:14px}
 @media(max-width:520px){.team-grid{grid-template-columns:1fr}.team-card{min-height:300px}.team-heading{align-items:start;gap:16px}.team-heading p{line-height:1.7}}
+
+.desktop-nav>a{position:relative;padding:8px 0}
+.desktop-nav>a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.desktop-nav>a:hover::after,.desktop-nav>a:focus-visible::after,.desktop-nav>a.active::after{transform:scaleX(1)}
