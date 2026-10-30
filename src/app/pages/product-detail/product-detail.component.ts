@@ -76,7 +76,7 @@ const GALLERY_CROPS: Omit<GalleryView, 'image'>[] = [
 
             <div class="stock-note">● {{ laptop.stock }} {{ km() ? 'គ្រឿងនៅសល់' : 'in stock · ready to ship' }}</div>
             <button class="button button-primary full-button" type="button" (click)="addToCart()">
-              {{ km() ? 'បន្ថែមទៅកន្ត្រក' : 'Add to cart' }} <span>↗</span>
+              {{ km() ? 'បន្ថែមទៅកន្ត្រក' : 'Add to cart' }} <span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M4 12 12 4M5 4h7v7" /></svg></span>
             </button>
             <p class="warranty-note">✦ {{ km() ? 'ធានា ១២ ខែ និងជំនួយក្រោយការលក់' : '12-month warranty and local after-sales support' }}</p>
           </div>
